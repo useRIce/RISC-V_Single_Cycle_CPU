@@ -1,0 +1,56 @@
+[*]
+[*] GTKWave Analyzer v3.3.100 (w)1999-2019 BSI
+[*] Sat Oct 11 12:10:23 2025
+[*]
+[dumpfile] "D:\Projects\Project files\RISC-V_Single_Cycle_CPU\top_tb.vcd"
+[dumpfile_mtime] "Sat Oct 11 11:58:47 2025"
+[dumpfile_size] 68807
+[savefile] "D:\Projects\Project files\RISC-V_Single_Cycle_CPU\signals_to_view.gtkw"
+[timestart] 708
+[size] 1920 1009
+[pos] -217 -217
+*-4.943417 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top_tb.
+[treeopen] top_tb.dut.
+[sst_width] 197
+[signals_width] 150
+[sst_expanded] 1
+[sst_vpaned_height] 627
+@28
+top_tb.dut.clk
+top_tb.dut.rst
+@200
+-
+@22
+[color] 2
+top_tb.dut.pc[31:0]
+[color] 3
+top_tb.dut.inst[31:0]
+@28
+top_tb.dut.opcode[6:0]
+top_tb.dut.alu_op[5:0]
+top_tb.dut.branch_op[2:0]
+@200
+-
+@22
+top_tb.dut.immediate[31:0]
+[color] 2
+top_tb.dut.rs1_addr[4:0]
+[color] 5
+top_tb.dut.rs1[31:0]
+[color] 2
+top_tb.dut.rs2_addr[4:0]
+[color] 5
+top_tb.dut.rs2[31:0]
+@200
+-
+@22
+top_tb.dut.result[31:0]
+[color] 2
+top_tb.dut.rd_addr[4:0]
+[color] 5
+top_tb.dut.rd[31:0]
+@28
+top_tb.dut.mem_write
+[pattern_trace] 1
+[pattern_trace] 0
