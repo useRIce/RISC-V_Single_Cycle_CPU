@@ -6,7 +6,7 @@ It handles a variety of operations, including addition, subtraction,
 bitwise operations, and comparisons, allowing the CPU to process instructions efficiently.
 */
 
-`define DATA_WIDTH 32
+`include "definitions.vh"
 
 // RISC-V ALU Operations
 `define OP_ALU_ADD    6'b011001 // Add

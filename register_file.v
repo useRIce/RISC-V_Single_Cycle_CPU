@@ -6,8 +6,7 @@ Notably, the first register, x0, consistently holds the value 0,
 meaning that both reading from and writing to this register will always yield 0.
 */
 
-`define DATA_WIDTH 32
-`define NUM_REGISTER 32
+`include "definitions.vh"
 
 module register_file (
 	// INPUT
@@ -26,13 +25,6 @@ module register_file (
 // Signal Declarations
 reg [`DATA_WIDTH-1:0] registers [0:`NUM_REGISTER-1];     // register file declaration
 
-// Initial Memory Dump (only for testbenching purpose)
-initial begin
-    for (integer i = 0; i < `NUM_REGISTER; i = i + 1) begin
-            registers[i] = 0;  // Initialize each memory location to 0
-    end
-end
-
 // Continuos Assignments
 // Reading from rs1 and rs2 registers in the register file (checking if the address of both is not same)
 assign o_rs1 = registers[i_rs1_addr];
@@ -41,9 +33,38 @@ assign o_rs2 = registers[i_rs2_addr];
 // Writing to rd register in register file
 always @(posedge i_clk) begin
     if(i_rst) begin
-        for(integer i = 0; i < `NUM_REGISTER; i++) begin
-            registers[i] <= `DATA_WIDTH'd0;
-        end
+        registers[0] = 32'd0;
+        registers[1] = 32'd0;
+        registers[2] = 32'd0;
+        registers[3] = 32'd0;
+        registers[4] = 32'd0;
+        registers[5] = 32'd0;
+        registers[6] = 32'd0;
+        registers[7] = 32'd0;
+        registers[8] = 32'd0;
+        registers[9] = 32'd0;
+        registers[10] = 32'd0;
+        registers[11] = 32'd0;
+        registers[12] = 32'd0;
+        registers[13] = 32'd0;
+        registers[14] = 32'd0;
+        registers[15] = 32'd0;
+        registers[16] = 32'd0;
+        registers[17] = 32'd0;
+        registers[18] = 32'd0;
+        registers[19] = 32'd0;
+        registers[20] = 32'd0;
+        registers[21] = 32'd0;
+        registers[22] = 32'd0;
+        registers[23] = 32'd0;
+        registers[24] = 32'd0;
+        registers[25] = 32'd0;
+        registers[26] = 32'd0;
+        registers[27] = 32'd0;
+        registers[28] = 32'd0;
+        registers[29] = 32'd0;
+        registers[30] = 32'd0;
+        registers[31] = 32'd0;
     end
     else if(i_we) begin
         registers[i_rd_addr] <= (i_rd_addr) ? i_rd : `DATA_WIDTH'd0;

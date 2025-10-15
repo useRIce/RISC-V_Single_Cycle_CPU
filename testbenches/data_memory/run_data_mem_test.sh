@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Command to compile all the modules
-iverilog -o data_memory_tb.vvp -s data_memory_tb ../../data_memory.v data_memory_tb.v
+iverilog -o data_memory_tb.vvp -s data_memory_tb -I ../../ ../../data_memory.v data_memory_tb.v
 
 # Now to generate the .vcd file by dumping 
 vvp data_memory_tb.vvp

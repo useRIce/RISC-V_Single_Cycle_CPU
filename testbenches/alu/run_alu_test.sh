@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Command to compile all the modules
-iverilog -o alu_tb.vvp -s alu_tb ../../alu.v alu_tb.v
+iverilog -o alu_tb.vvp -s alu_tb -I ../../ ../../alu.v alu_tb.v
 
 # Now to generate the .vcd file by dumping 
 vvp alu_tb.vvp

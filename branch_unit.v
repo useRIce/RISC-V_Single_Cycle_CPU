@@ -7,7 +7,7 @@ comparisons. Typically, a program executes instructions in a sequential
 order, one after the other.
 */
 
-`define DATA_WIDTH 32
+`include "definitions.vh"
 
 `define BRANCH_BEQ      3'b000 // Branch Equal
 `define BRANCH_BNE      3'b001 // Branch Not Equal

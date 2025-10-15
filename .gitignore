@@ -1,6 +1,9 @@
 Reference_AI/
-waveforms/
-Synthesis/
+synthesis/
+RISC-V_Single_Cycle_CPU.code-workspace
+waveforms/schematics/synth_schematic_full.pdf
+waveforms/schematics/synth_schematic_full.sch
+waveforms/reports/
 Resources.sh
 *.swp
 *.png

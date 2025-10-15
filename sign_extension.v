@@ -8,7 +8,7 @@ When an instruction is fetched, the Sign Extension Unit determines the instructi
 and extracts the necessary value from the relevant fields to compute the new immediate value.
 */
 
-`define INST_WIDTH 32
+`include "definitions.vh"
 
 // RISC-V Base Instruction Set Opcodes
 `define OPCODE 7
