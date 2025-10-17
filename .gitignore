@@ -4,6 +4,7 @@ RISC-V_Single_Cycle_CPU.code-workspace
 waveforms/schematics/synth_schematic_full.pdf
 waveforms/schematics/synth_schematic_full.sch
 waveforms/reports/
+waveforms/*.png
 Resources.sh
 *.swp
-*.png
+
