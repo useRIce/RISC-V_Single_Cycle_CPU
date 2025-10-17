@@ -13,7 +13,7 @@ module  top_tb;
 
   reg rst;
   reg clk;
-  wire [`DATA_WIDTH-1:0] debug = 32'h00000000;
+  wire [`DATA_WIDTH-1:0] debug;
 
 
   top dut (
@@ -25,12 +25,20 @@ module  top_tb;
   // Initializing register file to zero (only for testbenching purpose)
   initial begin
     for (integer i = 0; i < `NUM_REGISTER; i = i + 1) begin : REG_FILE_INITIALIZE
-        dut.reg_file.registers[i] = 0;  // Initialize each register to 0
+        dut.reg_file.registers[i] = `DATA_WIDTH'd0;  // Initialize each register to 0
     end
   end
 
   // Initial Instruction Memory Dump containing compiled program (only for testbenching purpose)
   initial begin
+
+    // for (integer i = 0; i < 256; i = i + 1) begin : INST_MEM_INITIALIZE
+    //     dut.imem.memory[i] = 32'd0;  // Initialize each memory location to 0
+    // end
+
+    // $readmemb("instruction_mem.o", dut.imem.memory, [start_address], [end_address]);
+    // $readmemh("instruction_mem.hex", dut.imem.memory, [start_address], [end_address]);
+
     dut.imem.memory[0] = 32'hf0000137;
     dut.imem.memory[1] = 32'h00010113;
     dut.imem.memory[2] = 32'h250000ef;
@@ -252,9 +260,13 @@ module  top_tb;
   
   // Initial Memory Dump (only for testbenching purpose only)
 initial begin
-    for (integer i = 0; i < MEM_SIZE; i = i + 1) begin : DATA_MEM_INITIALIZE
+    for (integer i = 0; i < 1024; i = i + 1) begin : DATA_MEM_INITIALIZE
         dut.dmem.memory[i] = 0;  // Initialize each memory location to 0
     end
+
+    // $readmemb("data_mem.o", dut.dmem.memory, [start_address], [end_address]);
+    // $readmemh("data_mem.hex", dut.dmem.memory, [start_address], [end_address]);
+
     dut.dmem.memory[0] = 32'h6c6c6548;
     dut.dmem.memory[1] = 32'h6f77206f;
     dut.dmem.memory[2] = 32'h21646c72;

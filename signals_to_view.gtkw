@@ -1,21 +1,21 @@
 [*]
 [*] GTKWave Analyzer v3.3.100 (w)1999-2019 BSI
-[*] Sat Oct 11 12:10:23 2025
+[*] Fri Oct 17 19:45:56 2025
 [*]
-[dumpfile] "D:\Projects\Project files\RISC-V_Single_Cycle_CPU\top_tb.vcd"
-[dumpfile_mtime] "Sat Oct 11 11:58:47 2025"
-[dumpfile_size] 68807
-[savefile] "D:\Projects\Project files\RISC-V_Single_Cycle_CPU\signals_to_view.gtkw"
-[timestart] 708
-[size] 1920 1009
-[pos] -217 -217
-*-4.943417 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[dumpfile] "D:\Projects\project_files\RISC-V_Single_Cycle_CPU\top_tb.vcd"
+[dumpfile_mtime] "Thu Oct 16 10:28:46 2025"
+[dumpfile_size] 68827
+[savefile] "D:\Projects\project_files\RISC-V_Single_Cycle_CPU\signals_to_view.gtkw"
+[timestart] 0
+[size] 1392 908
+[pos] -1 -1
+*-4.943417 25 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] top_tb.
 [treeopen] top_tb.dut.
 [sst_width] 197
 [signals_width] 150
 [sst_expanded] 1
-[sst_vpaned_height] 627
+[sst_vpaned_height] 552
 @28
 top_tb.dut.clk
 top_tb.dut.rst
@@ -52,5 +52,7 @@ top_tb.dut.rd_addr[4:0]
 top_tb.dut.rd[31:0]
 @28
 top_tb.dut.mem_write
+@23
+top_tb.debug[31:0]
 [pattern_trace] 1
 [pattern_trace] 0
